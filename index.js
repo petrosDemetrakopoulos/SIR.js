@@ -38,7 +38,7 @@ var printChart = function (sol) {
     var config = {
         offset:  5,
         padding: '     ',
-        height:  10
+        height:  6
     };
     var S = [];
     var I = [];
