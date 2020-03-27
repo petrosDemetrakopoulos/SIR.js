@@ -11,7 +11,7 @@ npm i --save sir.js
 ```
 let SIRjs = require('sir.js');
 
-let solution = SIRjs.solve({S0: 0.9, I0: 0.1, R0: 0.0, t:1, N: 500});
+let solution = SIRjs.solve({S0: 0.9, I0: 0.1, R0: 0.0, t:1, N: 500, beta: 0.35, gamma: 0.1});
 SIRjs.printChart(solution);
 ```
 
@@ -24,6 +24,8 @@ It has only 2 functions: ```solve()``` and ```printChart()```
 * R0: Initial R (Recovered) value
 * t: The time step
 * N: The time span (in units of time) aka the length of the simulation
+* beta: The parameter controlling how often a susceptible-infected contact results in a new infection
+* gamma: The rate an infected recovers and moves into the resistant phase
 
 It return an array of objects that contain S,I and R values for each moment.
 

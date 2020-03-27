@@ -1,37 +1,44 @@
 var euler = require('ode-euler');
 var asciichart = require ('asciichart');
 var solution = [];
-
-var SIRModel = function (dydt, y, t) {
-    var beta = 0.35;
-    var gamma = 0.1;
+var beta = 0.35;
+var gamma = 0.1;
+var n = 1;
+var i = 0;
+var RungeKutta4 = require('runge-kutta-4');
+var SIRModel = function (t, y) {
+    var dydt = [];
     var S = y[0];
     var I = y[1];
     var R = y[2];
-    var dS_dt = -beta * S * I;
-    var dI_dt = beta * S * I - gamma * I;
+    var dS_dt = -(beta * S * I) / n;
+    var dI_dt = (beta * S * I) / n - (gamma * I);
     var dR_dt = gamma * I;
-    solution.push({S: dS_dt, I: dI_dt, R: dR_dt});
+    solution.push({S: S, I: I, R: R});
     dydt[0] = dS_dt;
     dydt[1] = dI_dt;
     dydt[2] = dR_dt;
+    i++;
     return dydt;
 };
 
 var solve = function (options) {
     var dt = options.t; // time step
     var t0 = 0;
+    n = options.I0 + options.S0 + options.R0;
+    beta = options.beta;
+    gamma = options.gamma;
     var y0 = [options.S0, options.I0, options.R0];
-    var integrator = euler( y0, SIRModel, t0, dt);
+    var integrator = new RungeKutta4(SIRModel,t0,y0,dt);
     integrator.steps(options.N);
     return solution;
 };
 
 var printChart = function (sol) {
     var config = {
-        offset:  2,
+        offset:  5,
         padding: '     ',
-        height:  5
+        height:  10
     };
     var S = [];
     var I = [];
