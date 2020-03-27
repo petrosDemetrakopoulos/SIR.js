@@ -12,7 +12,9 @@
     "epidemic",
     "simulation",
     "pandemic",
-    "covid19"
+    "covid19",
+    "covid",
+    "plague"
   ],
   "author": "Petros Demetrkopoulos",
   "license": "MIT",
