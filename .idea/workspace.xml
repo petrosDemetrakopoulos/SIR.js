@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7616d207-9b3d-4a49-a371-eb071420c395" name="Default Changelist" comment="" />
+    <list default="true" id="7616d207-9b3d-4a49-a371-eb071420c395" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitigrnore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZiWhbnco1KH47HzejnY5uCfah0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -40,7 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585322514035</updated>
       <workItem from="1585322515476" duration="5852000" />
-      <workItem from="1585331963634" duration="1060000" />
+      <workItem from="1585331963634" duration="1224000" />
     </task>
     <servers />
   </component>
@@ -48,6 +55,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="435" y="244" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585333163061">
+      <screen x="0" y="23" width="1440" height="822" />
+    </state>
+    <state x="435" y="244" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.822@0.23.1440.822" timestamp="1585333163061" />
     <state x="221" y="73" key="SettingsEditor" timestamp="1585333007527">
       <screen x="0" y="23" width="1440" height="822" />
     </state>
