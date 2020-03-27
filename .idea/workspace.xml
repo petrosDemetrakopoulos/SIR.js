@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7616d207-9b3d-4a49-a371-eb071420c395" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitigrnore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitigrnore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitigrnore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,9 @@
       <option name="presentableId" value="Default" />
       <updated>1585322514035</updated>
       <workItem from="1585322515476" duration="5852000" />
-      <workItem from="1585331963634" duration="1224000" />
+      <workItem from="1585331963634" duration="1557000" />
+      <workItem from="1585333565195" duration="2000" />
+      <workItem from="1585333778890" duration="225000" />
     </task>
     <servers />
   </component>
