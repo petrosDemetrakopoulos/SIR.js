@@ -6,6 +6,7 @@ var n = 1;
 var i = 0;
 var RungeKutta4 = require('runge-kutta-4');
 var SIRModel = function (t, y) {
+    //the differential equation
     var dydt = [];
     var S = y[0];
     var I = y[1];
@@ -24,12 +25,12 @@ var SIRModel = function (t, y) {
 var solve = function (options) {
     var dt = options.t; // time step
     var t0 = 0;
-    n = options.I0 + options.S0 + options.R0;
+    n = options.I0 + options.S0 + options.R0; //n is the total population so it is the sum of the I0,S0,R0
     beta = options.beta;
     gamma = options.gamma;
-    var y0 = [options.S0, options.I0, options.R0];
-    var integrator = new RungeKutta4(SIRModel,t0,y0,dt);
-    integrator.steps(options.N);
+    var y0 = [options.S0, options.I0, options.R0]; //initial values of the differential equation
+    var integrator = new RungeKutta4(SIRModel,t0,y0,dt); //solve the differential equation using the 4th order Runge-Kutta numerical method
+    integrator.steps(options.N); //solve for N steps
     return solution;
 };
 
