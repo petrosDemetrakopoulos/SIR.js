@@ -6,6 +6,13 @@
   "scripts": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petrosDemetrakopoulos/SIR.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/petrosDemetrakopoulos/SIR.js/issues"
+  },
   "keywords": [
     "SIR",
     "model",
@@ -14,7 +21,12 @@
     "pandemic",
     "covid19",
     "covid",
-    "plague"
+    "plague",
+    "sars",
+    "covid-19",
+    "coronavirus",
+    "virus",
+    "corona"
   ],
   "author": "Petros Demetrkopoulos",
   "license": "MIT",

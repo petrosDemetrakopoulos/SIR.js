@@ -1,4 +1,3 @@
-var euler = require('ode-euler');
 var asciichart = require ('asciichart');
 var solution = [];
 var beta = 0.35;
@@ -14,6 +13,7 @@ var SIRModel = function (t, y) {
     var dS_dt = -(beta * S * I) / n;
     var dI_dt = (beta * S * I) / n - (gamma * I);
     var dR_dt = gamma * I;
+    console.log([S,I,R]);
     solution.push({S: S, I: I, R: R});
     dydt[0] = dS_dt;
     dydt[1] = dI_dt;

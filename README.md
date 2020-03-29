@@ -11,7 +11,7 @@ npm i --save sir.js
 ```
 let SIRjs = require('sir.js');
 
-let solution = SIRjs.solve({S0: 0.9, I0: 0.1, R0: 0.0, t:1, N: 500, beta: 0.35, gamma: 0.1});
+let solution = SIRjs.solve({S0: 100, I0: 10, R0: 0, t:1, N: 10, beta: 0.8, gamma: 0.4});
 SIRjs.printChart(solution);
 ```
 
@@ -27,7 +27,7 @@ It has only 2 functions: ```solve()``` and ```printChart()```
 * beta: The parameter controlling how often a susceptible-infected contact results in a new infection
 * gamma: The rate an infected recovers and moves into the resistant phase
 
-It return an array of objects that contain S,I and R values for each moment.
+It returns an array of objects that contain S,I and R values for each moment.
 
 ```printChart()``` function prints an ASCII chart for each one of the S,I,R variables
 
