@@ -31,7 +31,7 @@
   "author": "Petros Demetrkopoulos",
   "license": "MIT",
   "dependencies": {
-    "asciichart": "^1.5.13",
+    "asciichart": "^1.5.25",
     "runge-kutta-4": "^1.0.5"
   },
   "devDependencies": {}
