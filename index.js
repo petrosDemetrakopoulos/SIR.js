@@ -1,19 +1,19 @@
-var asciichart = require ('asciichart');
-var solution = [];
-var beta = 0.35;
-var gamma = 0.1;
-var n = 1;
-var i = 0;
-var RungeKutta4 = require('runge-kutta-4');
-var SIRModel = function (t, y) {
+const asciichart = require ('asciichart');
+let solution = [];
+let beta = 0.35;
+let gamma = 0.1;
+let n = 1;
+let i = 0;
+const RungeKutta4 = require('runge-kutta-4');
+const SIRModel = function (t, y) {
     //the differential equation
-    var dydt = [];
-    var S = y[0];
-    var I = y[1];
-    var R = y[2];
-    var dS_dt = -(beta * S * I) / n;
-    var dI_dt = (beta * S * I) / n - (gamma * I);
-    var dR_dt = gamma * I;
+    let dydt = [];
+    let S = y[0];
+    let I = y[1];
+    let R = y[2];
+    let dS_dt = -(beta * S * I) / n;
+    let dI_dt = (beta * S * I) / n - (gamma * I);
+    let dR_dt = gamma * I;
     solution.push({S: S, I: I, R: R});
     dydt[0] = dS_dt;
     dydt[1] = dI_dt;
@@ -22,28 +22,28 @@ var SIRModel = function (t, y) {
     return dydt;
 };
 
-var solve = function (options) {
-    var dt = options.t; // time step
-    var t0 = 0;
+const solve = function (options) {
+    let dt = options.t; // time step
+    let t0 = 0;
     n = options.I0 + options.S0 + options.R0; //n is the total population so it is the sum of the I0,S0,R0
     beta = options.beta;
     gamma = options.gamma;
-    var y0 = [options.S0, options.I0, options.R0]; //initial values of the differential equation
-    var integrator = new RungeKutta4(SIRModel,t0,y0,dt); //solve the differential equation using the 4th order Runge-Kutta numerical method
+    let y0 = [options.S0, options.I0, options.R0]; //initial values of the differential equation
+    let integrator = new RungeKutta4(SIRModel,t0,y0,dt); //solve the differential equation using the 4th order Runge-Kutta numerical method
     integrator.steps(options.N); //solve for N steps
     return solution;
 };
 
-var printChart = function (sol) {
-    var config = {
+const printChart = function (sol) {
+    let config = {
         offset:  5,
         padding: '     ',
         height:  6
     };
-    var S = [];
-    var I = [];
-    var R = [];
-    for (var i = 0; i < sol.length; i++) {
+    let S = [];
+    let I = [];
+    let R = [];
+    for (let i = 0; i < sol.length; i++) {
         S[i] = sol[i].S;
         I[i] = sol[i].I;
         R[i] = sol[i].R;
