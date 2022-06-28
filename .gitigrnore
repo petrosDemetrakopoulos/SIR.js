@@ -1,2 +1,4 @@
 /node_modules
-.idea
+/.idea
+/.nyc_output
+/lib/.nyc_output
